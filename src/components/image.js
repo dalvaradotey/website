@@ -12,14 +12,14 @@ import Img from "gatsby-image"
  * - `gatsby-image`: https://gatsby.dev/gatsby-image
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
-
-const Image = () => (
+/*
+const Image = (props) => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+        placeholderImage: file(relativePath: { eq: "laguna-arcoiris-conguillio.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 300) {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -30,3 +30,39 @@ const Image = () => (
   />
 )
 export default Image
+*/
+
+const Image = props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        images: allFile {
+          edges {
+            node {
+              relativePath
+              name
+              childImageSharp {
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => {
+      const image = data.images.edges.find(n => {
+        return n.node.relativePath.includes(props.filename);
+      });
+      if (!image) {
+        return null;
+      }
+
+      //const imageSizes = image.node.childImageSharp.sizes; sizes={imageSizes}
+      return <Img alt={props.alt} fluid={image.node.childImageSharp.fluid} />;
+    }}
+  />
+);
+
+export default Image;

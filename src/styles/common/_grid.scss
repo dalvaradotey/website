@@ -1,0 +1,21 @@
+.grid {
+  display: grid;
+}
+
+.grid-container {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  // grid-template-rows: max-content 1fr;
+  grid-template-areas: "s s c c c c c";
+  // grid-gap: 32px 24px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding-bottom: 64px;
+}
+
+nav {
+  grid-area: s;
+}
+
+main {
+  grid-area: c;
+}
