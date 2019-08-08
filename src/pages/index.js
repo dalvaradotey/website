@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "gatsby";
 
 import Layout from "../components/Layouts/HomeLayout";
@@ -8,9 +8,20 @@ import SEO from "../components/seo";
 import PostCard from "../components/Posts/PostCard";
 
 const MyNameIs = () => (
-  <div className="flex orange--bg pa6">
-    <PostCard />
-  </div>
+  <Fragment>
+    <div className="flex orange--bg pa6">
+      <PostCard />
+    </div>
+    <div className="flex dark-blue--bg pa6">
+      <PostCard />
+    </div>
+    <div className="flex yellow--bg pa6">
+      <PostCard />
+    </div>
+    <div className="flex blue--bg pa6">
+      <PostCard />
+    </div>
+  </Fragment>
 );
 
 const IndexPage = () => (
