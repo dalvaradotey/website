@@ -3,19 +3,32 @@
 }
 
 .grid-container {
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  // grid-template-rows: max-content 1fr;
-  grid-template-areas: "s s c c c c c";
+  // grid-template-columns: 1fr;
+  grid-template-rows: max-content 1fr;
+  grid-template-areas: 
+    "s"
+    "c";
   // grid-gap: 32px 24px;
-  margin: 0 auto;
+  // margin: 0 auto;
   min-height: 100vh;
-  padding-bottom: 64px;
+  //padding-bottom: 64px;
 }
 
-nav {
+aside {
   grid-area: s;
 }
 
-main {
+.HomeLayout-grid {
   grid-area: c;
+}
+
+@media (min-width: 641px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "s s c c c c c";
+    grid-template-rows: max-content 1fr;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding-bottom: 64px;
+  }
 }

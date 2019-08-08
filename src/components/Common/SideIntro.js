@@ -4,8 +4,8 @@ import TwitterIcon from '../../../assets/twitter.svg';
 import InstagramIcon from '../../../assets/instagram.svg';
 
 const SideIntro = () => (
-  <nav className="fixed">
-    <div className="ph5 v-mid h-100 mt6">
+  <aside className="flex fixed-l">
+    <div className="v-mid h-100 ph5-l mt6-l mh4 mv5">
       <div className="b dark-blue">Mi nombre es</div>
       <h1 className="mt0 b f1 lh-solid blue">
         Diego<br/>
@@ -20,12 +20,24 @@ const SideIntro = () => (
         notas en la guitarra.
       </p>
       <div className="flex mv4">
-        <div className="mr3 gray" style={{ width: '30px' }}><GitHubIcon /></div>
-        <div className="mh3" style={{ width: '30px' }}><InstagramIcon /></div>
-        <div className="mh3" style={{ width: '30px' }}><TwitterIcon /></div>
+        <div className="mr3 gray" style={{ width: '30px' }}>
+          <a href="https://github.com/dalvaradotey/">
+            <GitHubIcon />
+          </a>
+        </div>
+        <div className="mh3" style={{ width: '30px' }}>
+          <a href="https://www.instagram.com/dalvaradotey/">
+            <InstagramIcon />
+          </a>
+        </div>
+        <div className="mh3" style={{ width: '30px' }}>
+          <a href="https://twitter.com/dalvaradotey/">
+            <TwitterIcon />
+          </a>
+        </div>
       </div>
     </div>
-  </nav>
+  </aside>
 );
 
 export default SideIntro;

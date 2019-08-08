@@ -2,12 +2,12 @@ import React, { Fragment } from 'react';
 import SideIntro from '../Common/SideIntro';
 
 const HomeLayout = ({ children }) => (
-  <Fragment>
-    <div className="grid grid-container">
-      <SideIntro />
-      <main>{children}</main>
-    </div>    
-  </Fragment>
+  <main className="grid grid-container">
+    <SideIntro />
+    <div className="HomeLayout-grid">
+      {children}
+    </div>
+  </main>
 );
 
 export default HomeLayout;

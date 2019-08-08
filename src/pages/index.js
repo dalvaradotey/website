@@ -9,16 +9,16 @@ import PostCard from "../components/Posts/PostCard";
 
 const MyNameIs = () => (
   <Fragment>
-    <div className="flex orange--bg pa6">
+    <div className="orange--bg pa6-l ph3 pv5">
       <PostCard />
     </div>
-    <div className="flex dark-blue--bg pa6">
+    <div className="dark-blue--bg pa6-l ph3 pv5">
       <PostCard />
     </div>
-    <div className="flex yellow--bg pa6">
+    <div className="yellow--bg pa6-l ph3 pv5">
       <PostCard />
     </div>
-    <div className="flex blue--bg pa6">
+    <div className="blue--bg pa6-l ph3 pv5">
       <PostCard />
     </div>
   </Fragment>
